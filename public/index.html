@@ -17,6 +17,13 @@
         socket.on('disconnect',function(){
             console.log('Perdimos conexción')
         });
+
+
+        socket.emit('mensaje',{nombre:'Axell'});
+        socket.on('mensaje',(payload)=>{
+            console.log('admin',payload)
+
+        })
     </script>
 </body>
 </html>
