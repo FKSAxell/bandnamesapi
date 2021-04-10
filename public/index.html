@@ -21,7 +21,12 @@
 
         socket.emit('mensaje',{nombre:'Axell'});
         socket.on('mensaje',(payload)=>{
-            console.log('admin',payload)
+            console.log('Escuchando',payload)
+
+        })
+
+        socket.on('nuevo-mensaje',(payload)=>{
+            console.log('Escuchando',payload)
 
         })
     </script>
